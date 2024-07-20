@@ -1,0 +1,514 @@
+/* GENERAL */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 1em;
+  background-color: #ffffff;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav,
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 17vh;
+}
+
+.nav-links {
+  list-style: none;
+  gap: 2rem;
+  font-size: 1.5rem;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  color: grey;
+  text-decoration: underline;
+}
+
+.logo {
+  font-size: 2rem;
+}
+
+#hamburger-nav {
+  display: none;
+}
+
+#desktop-nav {
+  position: fixed; /* Fixing the navbar at the top */
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* Ensures the navbar stays on top of other elements */
+  background-color: #ffffff; /* Set the background color to match your design */
+  justify-content: space-around;
+  align-items: center;
+  height: 10vh;
+}
+
+/* Grid Container for Sections */
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  gap: 2rem;
+  padding-top: 12vh; /* Ensure content doesn't go under the header */
+}
+
+/* Each section is a grid item */
+section {
+  padding: 2rem;
+  margin: 0 10rem;
+  box-sizing: border-box;
+}
+
+.section-container {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+}
+
+/* PROFILE SECTION */
+
+#profile {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  height: 80vh;
+}
+
+.section__pic-container {
+  display: flex;
+  height: 400px;
+  width: 400px;
+  margin: auto 0;
+  background-color: #f0f0f0;
+  border-radius: 50%;
+}
+
+.section__text {
+  align-self: center;
+  text-align: center;
+}
+
+.section__text p {
+  font-weight: 600;
+}
+
+.section__text__p1 {
+  text-align: center;
+}
+
+.section__text__p2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  color: #444242;
+}
+
+.title {
+  font-size: 3rem;
+  text-align: center;
+}
+
+#socials-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+.icon {
+  cursor: pointer;
+  height: 2rem;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn {
+  font-weight: 600;
+  padding: 1rem;
+  width: 8rem;
+  border-radius: 2rem;
+  transition: all 300ms ease;
+}
+
+.btn-color-1,
+.btn-color-2 {
+  border: rgb(53, 53, 53) 0.1rem solid;
+}
+
+.btn-color-1:hover,
+.btn-color-2:hover {
+  cursor: pointer;
+}
+
+.btn-color-1:hover {
+  background: rgb(0, 0, 0);
+  color: white;
+}
+
+.btn-color-2 {
+  background: none;
+}
+
+.btn-color-2:hover {
+  border: rgb(255, 255, 255) 0.1rem solid;
+  background: rgb(53, 53, 53);
+  color: white;
+}
+
+
+
+/* ABOUT SECTION */
+#about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  text-align: center;
+}
+
+#about .title {
+  color: #000000;
+}
+
+.arrow {
+  margin-top: 2rem;
+  cursor: pointer;
+}
+
+.about-details-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.about-containers {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.details-container {
+  padding: 1.5rem;
+  flex: 1;
+  background: white;
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
+  text-align: center;
+}
+
+.section-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  height: 80%;
+}
+
+.text-container {
+  max-width: 600px;
+  text-align: center;
+}
+
+
+
+/* SKILLS SECTION */
+#skills {
+  padding: 2rem;
+  color: rgb(0, 0, 0);
+}
+
+#skills .section__text__p1 {
+  padding-top: 5rem;
+}
+
+#skills .title {
+  color: #000000;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.skills-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 2em;
+}
+
+.skills-card {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 5%;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex: 1 1 calc(33.333% - 1rem);
+  max-width: calc(33.333% - 1rem);
+}
+
+.skills-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.skills-card-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.skills-list article {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 150px;
+  text-align: center;
+}
+
+.skills-list i {
+  color: #444242;
+  margin-right: 0.5rem;
+}
+
+.skills-list h3 {
+  font-size: 1rem;
+  margin: 0;
+}
+
+@media (max-width: 1200px) {
+  .skills-card {
+    flex: 1 1 calc(50% - 1rem);
+    max-width: calc(50% - 1rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-card {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
+
+/* CONTACT SECTION */
+#contact {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 70vh;
+  color: #000000;
+}
+
+#contact .section__text__p1 {
+  color: #000;
+}
+
+#contact .title {
+  color: #000000;
+}
+
+.contact-info-upper-container {
+  display: flex;
+  justify-content: center;
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
+  background: rgb(250, 250, 250);
+  margin: 2rem auto;
+  padding: 0.5rem;
+}
+
+.contact-info-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 1rem;
+}
+
+.contact-info-container p {
+  font-size: larger;
+}
+
+.contact-icon {
+  cursor: default;
+}
+
+.email-icon {
+  height: 2.5rem;
+}
+
+/* FOOTER SECTION */
+
+footer {
+  height: 26vh;
+  margin: 0 1rem;
+}
+
+footer p {
+  text-align: center;
+}
+
+
+/* Slider */
+.container {
+  max-width: 1400px;
+  width: 100%;
+  padding: 60px 0;
+}
+.swiper-wrapper {
+  display: flex;
+}
+
+/* Swiper Navigation Buttons */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #000 !important; /* Ensure icons are visible on white background */
+  background: #fff !important; /* White background for navigation buttons */
+  border: 1px solid #ccc !important; /* Optional: Add a border for better visibility */
+  height: 50px !important;
+  width: 50px !important;
+  border-radius: 50% !important;
+  position: absolute !important;
+  top: var(--swiper-navigation-top-offset, 50%) !important;
+  z-index: 10 !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 24px !important;
+  color: #000 !important; /* Ensure the arrows/icons are visible */
+}
+
+
+/* Pagination Bullets */
+.swiper-pagination-bullet {
+  background-color: #ffffff !important; /* White bullets */
+  opacity: 0.7 !important; /* Optional: Adjust opacity for better visibility */
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #f8f6f6 !important; /* Black color for the active bullet */
+}
+
+/* Project Card Styles */
+.project-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.project-details {
+  padding: 15px;
+}
+
+.project-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: rgb(0, 0, 0);
+}
+
+.project-description {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.project-btn {
+  display: inline-flex;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.project-btn:hover {
+  background-color: #555;
+}
+
+.project-btn i {
+  margin-right: 8px;
+}
+
+/* Projects Section */
+#projects {
+  background-color: #0a0909;
+  padding: 4rem 2rem;
+  margin: 0; /* Remove negative margin */
+  color: #ffffff;
+}
+
+#projects .title {
+  color: #f4f2f2;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 40px;
+    height: 40px;
+  }
+}
